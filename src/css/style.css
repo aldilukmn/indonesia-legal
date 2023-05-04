@@ -1,0 +1,41 @@
+.jumbotron_home,
+.jumbotron_about,
+.jumbotron_news {
+  align-items: center;
+  background-image: url(../img/jumbotron_home.jpg);
+  background-size: cover;
+  background-color: goldenrod;
+  display: flex;
+  padding: 2rem 1rem;
+  height: 500px;
+  object-fit: cover;
+}
+
+.jumbotron_home hr,
+.jumbotron_about hr,
+.jumbotron_news hr {
+  border-top: 5px solid #fff;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.jumbotron_about,
+.jumbotron_news {
+  background-image: url(../img/jumbotron_about.jpg);
+  background-position: top;
+  height: 300px;
+}
+
+.jumbotron_news {
+  background-image: url(../img/jumbotron_news.jpg);
+  background-position: bottom;
+}
+
+.bg-warning-custom {
+  background-color: #ca9700;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid;
+}
+
