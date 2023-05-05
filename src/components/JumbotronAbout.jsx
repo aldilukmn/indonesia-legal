@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import AboutDetails from "../components/AboutDetails";
 import AboutCards from "../components/AboutCards";
 
-function JumbotronAbout() {
+function JumbotronAbout( { supervisory }) {
   let location = useLocation();
   let text;
   let main;
@@ -11,7 +11,7 @@ function JumbotronAbout() {
     main = <AboutDetails />;
   } else if (location.pathname === "/supervisoryboard") {
     text = "SUPERVISORY BOARD";
-    main = <AboutCards />;
+    main = <AboutCards supervisory={supervisory} />;
   }
   return (
     <>

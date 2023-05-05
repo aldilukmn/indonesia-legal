@@ -1,20 +1,25 @@
-import { FaSearch } from "react-icons/fa";
+import PaginationNews from "./PaginationNews";
+import PopulerNews from "./PopulerNews";
+import ListNews from "./ListNews";
+import MainNewsDetail from "./MainNewsDetail";
 
-function MainNews() {
+function MainNews({ pageNumbers, currentNews, currentPage, handleClick, handlePrevClick, handleNextClick }) {
+  const pathname = window.location.pathname; // Mendapatkan path dari URL
+
+  // Cek apakah path URL mengandung id
+  const isDetailPage = pathname.match(/^\/news\/\d+$/);
+
   return (
     <>
-      <div class="container-fluid bg-warning">
-        <div class="container">
-          <div class="row pt-3">
-            <div class="col-12">
-              <div class="input-group mb-3 mx-auto">
-                <input type="text" class="form-control form-control-lg" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                <button class="btn btn-lg btn-primary text-white shadow" type="button" id="button-addon2">
-                  <FaSearch /> Button
-                </button>
-              </div>
+      <div class="container">
+        <div class="row pt-5 pb-5">
+          <div class="col-lg-8 col-md-8 col-sm-12 pb-4">
+            <div class="row">
+              {isDetailPage ? <MainNewsDetail currentNews={currentNews} /> : <ListNews currentNews={currentNews} />}
+              <PaginationNews pageNumbers={pageNumbers} currentPage={currentPage} handleClick={handleClick} handlePrevClick={handlePrevClick} handleNextClick={handleNextClick} />
             </div>
           </div>
+          <PopulerNews />
         </div>
       </div>
     </>

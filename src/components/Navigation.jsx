@@ -44,14 +44,14 @@ function Navigation() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link to="/news" className={`nav-link ${activeLink === "/news" ? "active" : ""}`} onClick={() => handleNavLinkClick("/news")} aria-current="page" href="#">
+              <Link to="/news" className={`nav-link ${activeLink === "/news" ? "active" : ""}`} onClick={() => handleNavLinkClick("/news")}>
                 NEWS
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/event" className={`nav-link ${activeLink === "/event" ? "active" : ""}`} onClick={() => handleNavLinkClick("/event")}>
                 EVENT
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
