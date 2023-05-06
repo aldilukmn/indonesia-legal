@@ -2,7 +2,6 @@ import moment from "moment";
 
 function NewsDetail({ category, title, body, image, date, author }) {
     const format = 'dddd, MMMM DD YYYY - h:mmA';
-    
     const datetimeWIB = moment.utc(date).utcOffset('+0700').format(format);
     
     return (

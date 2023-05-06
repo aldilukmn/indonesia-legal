@@ -1,4 +1,3 @@
-import moment from "moment";
 import { Link } from "react-router-dom";
 
 function ListNews({currentNews }) {

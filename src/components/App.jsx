@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import News from "../pages/News";
 import Event from "../pages/Event";
 import MainNewsDetailWrapper from "./MainNewsDetail";
+import MainEventDetailWrapper from "./MainEventDetail";
 
 function capitalizeString(string) {
   const words = string.split(" ");
@@ -38,6 +39,7 @@ function App() {
           <Route path="/news" element={<News />}></Route>
           <Route path="/news/:id" element={<MainNewsDetailWrapper />} />
           <Route path="/event" element={<Event />}></Route>
+          <Route path="/event/:id" element={<MainEventDetailWrapper />}></Route>
         </Routes>
       </main>
       <Footer />
